@@ -1,0 +1,27 @@
+---
+title: "clegg_assignment3ec"
+author: "Alex Clegg"
+date: "2/6/2020"
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
+
+``` {r setup, include = FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+```{r locadpackages, message = FALSE}
+library(tidyverse)
+```
+
+``` {r dostuff,  message = FALSE, echo = FALSE}
+
+rankings <- read_csv("data/spi_global_rankings.csv")
+
+ggplot(rankings, mapping = aes(x = off, y = def)) +
+  geom_point()
+
+```
